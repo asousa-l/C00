@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asousa-l <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/16 13:35:01 by asousa-l          #+#    #+#             */
+/*   Updated: 2022/01/16 13:35:56 by asousa-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdbool.h>
 
@@ -20,10 +32,10 @@ void	ft_write_comb(char a, char b, char c, bool last)
 
 void	ft_print_comb(void)
 {
-	char a;
-	char b;
-	char c;
-	bool last;
+	char	a;
+	char	b;
+	char	c;
+	bool	last;
 
 	a = '0';
 	while (a <= '7')
@@ -42,10 +54,4 @@ void	ft_print_comb(void)
 		}
 		a++;
 	}
-}
-
-int main(void)
-{
-    ft_print_comb();
-    return 0;
 }

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asousa-l <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/16 13:43:30 by asousa-l          #+#    #+#             */
+/*   Updated: 2022/01/16 14:15:43 by asousa-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdbool.h>
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
 
 void	ft_write_combo(int n, int holders[])
@@ -37,8 +49,8 @@ void	ft_write_combo(int n, int holders[])
 
 void	ft_print_combn_recursive(int n, int curr, int holders[], int st_index)
 {
-	int index;
-	int max;
+	int	index;
+	int	max;
 
 	if (curr == n)
 	{
@@ -59,8 +71,8 @@ void	ft_print_combn_recursive(int n, int curr, int holders[], int st_index)
 
 void	ft_print_combn(int n)
 {
-	int holders[10];
-	int index;
+	int	holders[10];
+	int	index;
 
 	index = 0;
 	while (index < n)
@@ -70,9 +82,3 @@ void	ft_print_combn(int n)
 	}
 	ft_print_combn_recursive(n, 0, holders, -1);
 }
-
-int main(void)
-	{
-		ft_print_combn(5);
-		return 0;
-	}
